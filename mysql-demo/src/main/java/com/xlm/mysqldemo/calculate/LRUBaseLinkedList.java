@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class LRUBaseLinkedList<T> {
 
+
     /**
      * 默认链表容量
      */
