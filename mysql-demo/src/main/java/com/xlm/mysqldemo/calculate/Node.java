@@ -8,6 +8,8 @@ public class Node {
 
     public Integer val;
 
+
+
     public Node next;
 
     public Node(Integer val) {
