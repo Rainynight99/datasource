@@ -10,6 +10,8 @@ public class SingleLinkList {
 
     private final Node head = new Node(5);
 
+
+
     public void add1(Node newNode) {
         Node temp = head;
 
