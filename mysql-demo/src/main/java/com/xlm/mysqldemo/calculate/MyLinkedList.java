@@ -10,6 +10,7 @@ public class MyLinkedList {
 
     private MNode head;
 
+
     private Integer length;
 
     private MNode last;
