@@ -1,0 +1,36 @@
+# ??????
+server:
+  port: 9090
+
+# ?? ??
+spring:
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  jta:
+    enabled: true
+    atomikos:
+      datasource:
+        xa-data-source-class-name: com.mysql.cj.jdbc.MysqlXADataSource
+      properties:
+        enable-logging: true
+        max-actives: 200
+  application:
+    name: multi-datasource-instance
+  datasource:
+    # ????
+    master:
+      # ??????????????springboot?????????Hikari???????????jdbc-url???url??
+      jdbc-url: jdbc:mysql://xxxxxx:3306/test10?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: xxxx
+      password: xxxx
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    # ????
+    slave:
+      # ??????????????springboot?????????Hikari???????????jdbc-url???url??
+      jdbc-url: jdbc:mysql://xxxxxx:3306/test11?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: xxxx
+      password: xxxx
+      driver-class-name: com.mysql.cj.jdbc.Driver
